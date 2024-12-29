@@ -1,0 +1,5 @@
+const data = [
+    [`A 62-year-old man comes to the office for the evaluation of jaundice. Medical history is significant for<br>uncontrolled type 2 diabetes mellitus and morbid obesity. He does not use tobacco, alcohol, or illicit<br>drugs. There is no family history of liver disease. Vital signs are within normal limits. BMI is 47<br>kg/m2. Mild scleral icterus is present. Heart and lung sounds are normal. The abdomen is nontender<br>and nondistended. Trace bilateral lower extremity edema is present. Laboratory studies reveal elevated<br>transaminases. A liver biopsy is obtained, and trichrome staining shows the following:<br>Which of the following cells is directly responsible for the histologic finding indicated by the arrow?<br>A<br>Cholangiocytes<br>B<br>Hepatocytes<br>C<br>Kupffer cells<br>`]
+  ];
+  //End Developmental milestones for toddlerhood
+  

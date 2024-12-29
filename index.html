@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QuizMLE</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <h1 style="font-family: Segoe UI">QuizMLE</h1>
+        <div id="timer"></div>
+        <img class="theme-switch" src="" alt="" />
+      </nav>
+    </header>
+    <main>
+      <section id="quizSetup">
+        <div>
+          <h2>How to Use</h2>
+          <ul>
+            <li>Input the number of questions to attempt</li>
+            <li>Start quiz</li>
+            <li>Answer each question to yourself</li>
+            <li>Click show answer to view the correct answer</li>
+            <li>Mark answer as correct or wrong</li>
+            <li>
+              Wrong answers will be recorded and shown at the end of the quiz
+            </li>
+          </ul>
+        </div>
+        <h3 class="mt-2">Customize your quiz</h3>
+        <form>
+                    <div class="flex-col mt-2">
+            <label for="quizTime">Enter time in seconds</label>
+            <input
+              id="quizTime"
+              type="number"
+              class="form-control"
+              min="1"
+              max="240"
+              required
+            />
+          </div>
+          <div class="flex-col">
+            <label for="noOfQuestions" style="margin-bottom: 10px;">Enter number of questions</label>
+            <input
+              id="noOfQuestions"
+              type="number"
+              class="form-control"
+              min="1"
+              required
+            />
+          </div>
+          <button id="submit" class="btn mt-2">Start Quiz</button>
+        </form>
+      </section>
+      <section>
+        <div id="currentQuestion" class="d-none">
+          <div id="question" class="mt-2"></div>
+          <button id="showAnswer" onclick="showAnswerEvents()" class="mt-2 btn">
+            Show Answer
+          </button>
+          <div id="answer" class="d-none mt-2"></div>
+          <div id="markQuestion" class="d-none mt-2">
+            <button class="correct-btn" onclick="markAnswer('correct')">
+              Correct
+            </button>
+            <button class="wrong-btn" onclick="markAnswer('wrong')">
+              Wrong
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="questionHistory" class="d-none">
+          <h2>Wrong Answers</h2>
+        </div>
+        <h2 class="d-none" id="perfectScore">Perfect Score!</h2>
+        <button
+          id="newQuiz"
+          class="btn mt-2 d-none"
+          onclick="location.reload()"
+        >
+          Home
+        </button>
+      </section>
+    </main>
+
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/theme.js"></script>
+  </body>
+</html>
